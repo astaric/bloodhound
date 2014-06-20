@@ -138,6 +138,7 @@ ENTRY_POINTS = {
         'bhsearch.query_parser = bhsearch.query_parser',
         'bhsearch.query_suggestion = bhsearch.query_suggestion',
         'bhsearch.security = bhsearch.security',
+        'bhsearch.solr_backend = bhsearch.solr_backend',
         'bhsearch.whoosh_backend = bhsearch.whoosh_backend',
     ],
     }
@@ -168,7 +169,7 @@ setup(
     author = "Apache Bloodhound",
     license = "Apache License v2",
     url = "https://bloodhound.apache.org/",
-    requires = ['trac'],
+    requires = ['trac', 'lxml', 'sunburnt', 'httplib2'],
     install_requires = ['whoosh>=2.5.1'],
     package_dir = dict([p, i[0]] for p, i in PKG_INFO.iteritems()),
     packages = PKG_INFO.keys(),

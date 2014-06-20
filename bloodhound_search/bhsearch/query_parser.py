@@ -90,8 +90,6 @@ class DefaultQueryParser(Component):
         content = 1,
         changes = 1,
         message = 1,
-        query_suggestion_basket = 0,
-        relations = 1,
     )
 
     meta_keyword_parsers = ExtensionPoint(IMetaKeywordParser)
